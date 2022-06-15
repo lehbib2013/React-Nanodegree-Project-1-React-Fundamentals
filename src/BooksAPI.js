@@ -1,12 +1,13 @@
-const api =  process.env.REACT_APP_BOOKS || "https://reactnd-books-api.udacity.com";
+const api =
+  process.env.REACT_APP_BOOKS || "https://reactnd-books-api.udacity.com";
 
 let token = localStorage.token;
 
-if (!token) token = localStorage.token = 'xxxxxxxxxx';//Math.random().toString(36).substr(-8);
+if (!token) token = localStorage.token = "xxxxxxxxxx"; //Math.random().toString(36).substr(-8);
 
 const headers = {
   Accept: "application/json",
-  Authorization: {token},
+  Authorization: { token },
 };
 
 export const get = (bookId) =>
@@ -15,17 +16,17 @@ export const get = (bookId) =>
     .then((data) => data.book);
 
 export const getAll = async () => {
-      console.log(`dddddddd`);
-      console.log(`${api}/books`);
-      console.log(headers);
-      const response = await fetch(`${api}/books`, { headers });
-      try {
-        return await response.json();
-      } catch (error) {
-        console.log('error', error);
-        return null;
-      }
-    }
+  console.log(`dddddddd`);
+  console.log(`${api}/books`);
+  console.log(headers);
+  const response = await fetch(`${api}/books`, { headers });
+  try {
+    return await response.json();
+  } catch (error) {
+    console.log("error", error);
+    return null;
+  }
+};
 
 /* 
   export const getAll = () =>
