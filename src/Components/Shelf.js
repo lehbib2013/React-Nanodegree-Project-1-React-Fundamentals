@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 
 const Item = styled(Paper)`
   background-color: #8fa4e3;
-  border: 5px red solid;
+  border: 5px blue solid;
   padding: theme.spacing(1);
   textalign: "center";
   color: theme.palette.text.secondary;
@@ -19,7 +19,7 @@ const Item = styled(Paper)`
 `;
 const CustomizedCard = styled(Card)`
   color: #121211;
-  border: red 2px dashed;
+  border: blue 2px dashed;
   background-color: #fc9d03;
 
   :hover {

@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import "./Styles/Our.css";
-//import "./App.css";
-//import 'bootstrap/dist/css/bootstrap.min.css';
-
 import ShelfsList from "./Components/ShelfsList";
 import * as BooksAPI from "./BooksAPI";
 import BookSearch from "./Components/BookSearch";

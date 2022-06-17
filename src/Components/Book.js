@@ -9,6 +9,19 @@ import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import ListSubheader from '@mui/material/ListSubheader';
+import { ResetTvRounded } from "@mui/icons-material";
+
+const InfoZone = styled(Paper)`
+  background-color: #fcba03;
+  border: 0px red solid;
+  padding: theme.spacing(1);
+  textalign: "LEFT";
+  color: theme.palette.text.secondary;
+`;
 const Item = styled(Paper)`
   background-color: #8fa4e3;
   border: 5px red solid;
@@ -33,20 +46,42 @@ const Book = ({ book, shelfs, onClassify }) => {
   return (
     <BoxBook>
       <Stack
-        direction="column"
+        direction="row"
         divider={<Divider orientation="vertical" flexItem />}
-        spacing={2}
-      >
-        <Item>
+        spacing={2} >
+       
+       <InfoZone>
+          <List  sx={{
+        width: '100%',
+        maxWidth: 200,
+        bgcolor: 'background.paper',
+        position: 'relative',
+        overflow: 'auto',
+        maxHeight: 150,
+        '& ul': { padding: 0 },
+      }}  subheader={<li />} >
           <p>{book.title}</p>
-          <ControleChanger
+          <hr/>
+          <ul>
+            By: 
+      {book.authors?book.authors.map((author)=>{
+         return  (<ListItem key={`item-${author}`}>
+             <p>{book.author}</p>
+           <ListItemText primary={author} />
+         </ListItem>)
+          }):"There are no authors"}
+         </ul>
+       </List>
+       </InfoZone>
+          
+       
+        <Item>
+        <ControleChanger
             key={book.id}
             shelfs={shelfs}
             book={book}
             onClassify={onClassify}
           />
-        </Item>
-        <Item>
           <img src={book.imageLinks ? book.imageLinks.thumbnail : ""} />
         </Item>
       </Stack>

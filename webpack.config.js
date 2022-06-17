@@ -32,7 +32,10 @@ module.exports = {
         filename: '[name].bundle.js',
        // path: path.resolve(__dirname, 'dist'),
         publicPath: '/',
+        sourceMapFilename: "[name].js.map"
             },
+            devtool: 'eval-source-map',
+            watch: true,
     module: {
         rules: [
             {

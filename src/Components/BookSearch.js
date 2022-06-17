@@ -6,17 +6,18 @@ import PropTypes from "prop-types";
 
 const BookSearch = ({ books, shelfs, onClassify }) => {
   const [searchQuery, setSearchQuery] = useState("");
-
+  const [results, setResults] = useState([]);
   const updateText = (searchText) => {
     setSearchQuery(searchText);
     if (searchText !== "") filterBooks(searchText); //:books;
+    else setResults([]);
   };
 
-  const [results, setResults] = useState([]);
+  
 
   const clearText = () => {
     updateText("");
-    setResults(books.length > 0 ? books : []);
+   // setResults(books.length > 0 ? books : []);
   };
   const filterBooks = async (textTyped) => {
     if (textTyped !== "") {
@@ -50,7 +51,7 @@ const BookSearch = ({ books, shelfs, onClassify }) => {
         console.log("results....");
         console.log(resultBooks);
       } else setResults([]);
-    } else setResults(books);
+    } else setResults([]);
   };
 
   return (
