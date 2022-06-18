@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
+
 import Book from "./Book";
-import { useState, useEffect } from "react";
+
 import PropTypes from "prop-types";
 
 const BookSearchDetails = ({ results, shelfs, onClassify }) => {

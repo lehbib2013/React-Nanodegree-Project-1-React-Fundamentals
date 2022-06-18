@@ -1,8 +1,6 @@
 import Book from "./Book";
-import { useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import PropTypes from "prop-types";
-import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";

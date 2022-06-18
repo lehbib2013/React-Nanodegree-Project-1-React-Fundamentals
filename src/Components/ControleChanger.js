@@ -1,24 +1,12 @@
 import React from "react";
-import {
-  Dropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-} from "reactstrap";
-import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import Select from "@mui/material/Select";
 
 const ControleChanger = ({ shelfs, book, onClassify }) => {
-  useEffect(() => {
-    console.log("shelfs");
-    console.log(shelfs);
-    //    getBooks();
-  }, []);
+
 
   const applyChanges = (e) => {
     console.log("event.target.value");
@@ -40,7 +28,7 @@ const ControleChanger = ({ shelfs, book, onClassify }) => {
           label="Shelf"
         >
           <MenuItem value="-1">
-            <em>Assign to shelf</em>
+            <em>None</em>
           </MenuItem>
           {shelfs.map((shelf) => {
             return (

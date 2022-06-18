@@ -1,9 +1,5 @@
-import BookSearch from "./BookSearch";
 import Shelf from "./Shelf";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import Button from "@material-ui/core/Button";
-import Grid from "@mui/material/Grid";
 import PropTypes from "prop-types";
 
 const ShelfsList = ({ books, onClassify }) => {
@@ -15,7 +11,7 @@ const ShelfsList = ({ books, onClassify }) => {
 
   let shelf1 =
     books.length > 0
-      ? books.filter((c) => c.book.shelf == "currentlyReading")
+      ? books.filter((c) => c.book.shelf === "currentlyReading")
       : [];
   let shelf2 =
     books.length > 0 ? books.filter((c) => c.book.shelf === "wantToRead") : [];

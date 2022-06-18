@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./Styles/Our.css";
 import ShelfsList from "./Components/ShelfsList";
 import * as BooksAPI from "./BooksAPI";
@@ -26,7 +26,7 @@ const App = () => {
   ];
 
   const classify = async (book, shelf) => {
-    let updatedBooks = [];
+    
     console.log("updating...");
     console.log(shelf);
     console.log(book);

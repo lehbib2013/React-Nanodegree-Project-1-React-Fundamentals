@@ -1,19 +1,18 @@
 import React from "react";
-import { useState, useEffect } from "react";
+
 import ControleChanger from "./ControleChanger";
 import Box from "@material-ui/core/Box";
 import styled from "@emotion/styled";
 import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
 import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
+
 import PropTypes from "prop-types";
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import ListSubheader from '@mui/material/ListSubheader';
-import { ResetTvRounded } from "@mui/icons-material";
+
 
 const InfoZone = styled(Paper)`
   background-color: #fcba03;
@@ -36,11 +35,7 @@ const BoxBook = styled(Box)`
   background-repeat: no-repeat;
 `;
 const Book = ({ book, shelfs, onClassify }) => {
-  useEffect(() => {
-    //   console.log("book...");
-    //      console.log(book);
-    //    getBooks();
-  }, []);
+
 
   // imageLinks subtitle authors publisher description previewLink  language
   return (
@@ -82,7 +77,7 @@ const Book = ({ book, shelfs, onClassify }) => {
             book={book}
             onClassify={onClassify}
           />
-          <img src={book.imageLinks ? book.imageLinks.thumbnail : ""} />
+          <img src={book.imageLinks ? book.imageLinks.thumbnail : ""} alt="description " />
         </Item>
       </Stack>
     </BoxBook>

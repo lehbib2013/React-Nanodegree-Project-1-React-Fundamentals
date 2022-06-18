@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import BookSearchDetails from "./BookSearchDetails";
 import * as BooksAPI from "../BooksAPI";
 import PropTypes from "prop-types";
@@ -21,7 +21,7 @@ const BookSearch = ({ books, shelfs, onClassify }) => {
   };
   const filterBooks = async (textTyped) => {
     if (textTyped !== "") {
-      let i = 0;
+    
       console.log("textTyped");
       console.log(textTyped);
 
